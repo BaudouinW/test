@@ -1,0 +1,17 @@
+page_title: Mon panier
+product_title: Produit
+product_brand: Marque
+product_quantity: Quantité
+product_unit_price_without_tax: Prix unitaire € HT
+payment_button_label: Payer ma commande
+current_promotion_label: Promotion en cours
+promotion_text_without_free_delivery: Réduction de %reduction% % sur le prix de votre commande à partir de %minAmount% € d'achat !
+promotion_text_with_free_delivery: Frais de port offert à partir de %minAmount% € d'achat !
+promotion_text_without_min_amount: Réduction de %reduction% % sur le prix de votre commande !
+total_without_tax: Total € HT
+shipping_fees: Frais de port
+total_with_tax: Total € TTC
+tax_label: Montant de la TVA
+return_button_label: Retour au panier
+payment_title: Paiement de votre commande
+free_shipping_fees: Frais de port offert

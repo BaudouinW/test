@@ -1,13 +1,21 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\Entity;
-
 
 class Order
 {
     /**
-     * @var array
+     * @param array $items
      */
-    protected $items;
+    public function __construct(protected array $items) {}
+
+    /**
+     * @return array
+     */
+    public function getItems(): array
+    {
+        return $this->items;
+    }
 }

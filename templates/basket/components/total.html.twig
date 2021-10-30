@@ -1,0 +1,20 @@
+<table class="table" data-total>
+    <tbody>
+        <tr>
+            <th scope="row">{{ 'total_without_tax'|trans }}</th>
+            <td data-total-without-tax>{{ get_total_price_without_tax(order) }} €</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'shipping_fees'|trans }}</th>
+            <td data-shipping-fees>{{ get_shipping_fees(order, promotion) }} €</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'tax_label'|trans }}</th>
+            <td data-tax>{{ get_tax(order) }} €</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'total_with_tax'|trans }}</th>
+            <td data-total-with-tax>{{ get_total_price_with_tax(order, promotion) }} €</td>
+        </tr>
+    </tbody>
+</table>

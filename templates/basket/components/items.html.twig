@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">{{ 'product_title'|trans }}</th>
+            <th scope="col">{{ 'product_brand'|trans }}</th>
+            <th scope="col" class="text-center">{{ 'product_quantity'|trans }}</th>
+            <th scope="col" class="text-center">{{ 'product_unit_price_without_tax'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in order.items %}
+            <tr data-item-informations>
+                <td data-item-title>{{ item.product.title }}</td>
+                <td data-item-brand>{{ item.product.brand }}</td>
+                <td class="text-center" data-item-quantity>{{ item.quantity }}</td>
+                <td class="text-center" data-item-price>{{ item.product.price }} €</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

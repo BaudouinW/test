@@ -1,18 +1,30 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\Entity;
-
 
 class Item
 {
     /**
-     * @var Product
+     * @param Product $product
+     * @param int     $quantity
      */
-    protected $product;
+    public function __construct(protected Product $product, protected int $quantity) {}
 
     /**
-     * @var int
+     * @return Product
      */
-    protected $quantity;
+    public function getProduct(): Product
+    {
+        return $this->product;
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
 }

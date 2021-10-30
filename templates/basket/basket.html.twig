@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page_title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center p-4 bg-success bg-gradient text-white">
+                <h3 data-basket-title>{{ 'page_title'|trans }}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            {% include 'basket/components/payment_button.html.twig' %}
+        </div>
+
+        <div class="row">
+            <div class="col-10 offset-1 p-3">
+                {% include 'basket/components/items.html.twig' with {'order': order} only %}
+            </div>
+        </div>
+
+        {% if promotion is not null %}
+            {% include 'basket/components/promotion.html.twig' with {'promotion': promotion} only %}
+        {% endif %}
+
+        <div class="row">
+            <div class="col-3 offset-8 p-3">
+                {% include 'basket/components/total.html.twig' with {'order': order, 'promotion': promotion|default(null)} only %}
+            </div>
+        </div>
+
+        <div class="row">
+            {% include 'basket/components/payment_button.html.twig' %}
+        </div>
+    </div>
+{% endblock %}
